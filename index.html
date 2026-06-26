@@ -1,0 +1,1379 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Броши от Елены — авторские украшения ручной работы</title>
+  <meta name="description"
+    content="Авторские броши ручной работы из полимерной глины, кожи и кристаллов. Каждое изделие уникально. Доставка по России.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap"
+    rel="stylesheet">
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --cream: #F2EBE0;
+      --linen: #E8DDD0;
+      --sand: #D4BFA0;
+      --caramel: #A87848;
+      --coffee: #6B4226;
+      --espresso: #2E1608;
+      --white: #FAF5EE;
+      --text: #2A1806;
+      --muted: #6B5040;
+      --gold: #9E7A35;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Jost', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      font-weight: 300;
+      line-height: 1.8;
+      font-size: 17px;
+    }
+
+    /* ── NAV ── */
+
+    nav {
+      background: rgba(242, 235, 224, 0.98);
+      position: relative;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+      padding: 22px 5%;
+      /* шире */
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: none;
+      /* убрали ограничение */
+      margin: 0 auto;
+      border-bottom: 1px solid rgba(191, 150, 80, 0.15);
+    }
+
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      color: var(--espresso);
+      text-decoration: none;
+    }
+
+    .nav-logo span {
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.92rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--coffee);
+      text-decoration: none;
+      transition: color .2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--caramel);
+    }
+
+    /* ── HERO ── */
+
+    .hero {
+      padding-top: 40px !important;
+      /* или 60px */
+    }
+
+    .hero {
+      min-height: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding-top: 15px;
+      /* подняли ближе к шапке */
+      background: linear-gradient(160deg, #F2EBE0 0%, #EAE0D2 60%, #E2D5C3 100%);
+    }
+
+    .hero-text {
+      padding: 60px 60px 60px 80px;
+      justify-content: center;
+    }
+
+    .hero-image {
+      min-height: calc(100vh - 110px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding-top: 40px;
+      /* ← Уменьшили отступ */
+      background: linear-gradient(160deg, #F2EBE0 0%, #EAE0D2 60%, #E2D5C3 100%);
+    }
+
+    .hero-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding: 20px 64px 80px 80px;
+    }
+
+    .hero-eyebrow {
+      font-size: 0.9rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--caramel);
+      margin-bottom: 20px;
+    }
+
+    .hero-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.8rem, 4.5vw, 4.8rem);
+      font-weight: 300;
+      line-height: 1.1;
+      color: var(--espresso);
+      margin-bottom: 28px;
+      letter-spacing: -0.01em;
+    }
+
+    .hero-title em {
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    .hero-desc {
+      font-size: 1.1rem;
+      color: var(--muted);
+      max-width: 420px;
+      margin-bottom: 44px;
+      line-height: 1.9;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      padding: 14px 36px;
+      background: var(--espresso);
+      color: var(--cream);
+      font-family: 'Jost', sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: background .25s, transform .15s;
+      white-space: nowrap;
+    }
+
+    .btn-primary:hover {
+      background: var(--coffee);
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      display: inline-block;
+      margin-left: 16px;
+      padding: 13px 36px;
+      border: 1px solid var(--coffee);
+      color: var(--coffee);
+      font-family: 'Jost', sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all .25s;
+      white-space: nowrap;
+    }
+
+    .btn-outline:hover {
+      background: var(--coffee);
+      color: var(--cream);
+    }
+
+    .hero-image {
+      position: relative;
+      overflow: hidden;
+      background: var(--linen);
+      display: flex;
+      align-items: stretch;
+      /* ← было center */
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .hero-image {
+      margin-top: -40px;
+    }
+
+    .hero-image:hover img {
+      transform: none;
+    }
+
+    .hero-image-label {
+      position: absolute;
+      bottom: 32px;
+      left: 32px;
+      background: rgba(253, 252, 248, 0.88);
+      padding: 10px 18px;
+      font-size: 0.85rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--espresso);
+      backdrop-filter: blur(4px);
+    }
+
+    /* Мобильная версия Hero */
+    @media (max-width: 768px) {
+      .hero {
+        padding-top: 20px !important;
+        /* ← ещё меньше на телефоне */
+        min-height: auto !important;
+      }
+
+      .hero-text {
+        padding: 40px 24px 40px !important;
+        text-align: center !important;
+      }
+    }
+
+    /* Очень узкие экраны */
+    @media (max-width: 480px) {
+      .hero-image {
+        min-height: 320px;
+      }
+    }
+
+    /* Для тех, кто включает "версия для ПК" на телефоне */
+    @media (max-width: 768px) and (min-resolution: 2dppx) {
+      .hero {
+        min-height: auto;
+      }
+    }
+
+
+    /* ── DIVIDER ── */
+    .divider {
+      text-align: center;
+      padding: 50px 0 48px;
+      position: relative;
+    }
+
+    .divider::before {
+      content: '';
+      display: block;
+      width: 48px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      margin: 0 auto 24px;
+    }
+
+    .divider-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
+      font-weight: 300;
+      color: var(--espresso);
+      letter-spacing: 0.02em;
+    }
+
+    .divider-sub {
+      font-size: 0.92rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 10px;
+    }
+
+    /* ── CATALOG ── */
+    .catalog {
+      padding: 0 48px 96px;
+      background: var(--cream);
+    }
+
+    .catalog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 28px;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: #FBF6EF;
+      border-radius: 8px;
+      border: 1px solid rgba(191, 150, 80, 0.15);
+      overflow: hidden;
+      transition: all .4s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 25px 50px rgba(46, 22, 8, 0.12);
+    }
+
+    .card:hover .card-img img {
+      transform: scale(1.06);
+    }
+
+    .card-img {
+      aspect-ratio: 1/1;
+      overflow: hidden;
+      background: var(--linen);
+    }
+
+    .card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 45%;
+      transition: transform .5s ease;
+    }
+
+    .card-body {
+      padding: 20px 22px 24px;
+    }
+
+    .card-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: var(--espresso);
+      margin-bottom: 6px;
+      letter-spacing: 0.02em;
+    }
+
+    .card-desc {
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin-bottom: 14px;
+      line-height: 1.6;
+    }
+
+    .card-footer {
+      justify-content: space-between;
+    }
+
+    .card-price {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      color: var(--gold);
+      font-weight: 600;
+      letter-spacing: 0.03em;
+    }
+
+    .card-tag {
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      background: var(--linen);
+      padding: 5px 12px;
+    }
+
+    /* ── MODAL ── */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 200;
+      background: rgba(30, 14, 4, 0.7);
+      backdrop-filter: blur(4px);
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal-overlay.open {
+      display: flex;
+    }
+
+    .modal {
+      background: var(--white);
+      max-width: 760px;
+      width: 92%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      max-height: 90vh;
+      overflow: auto;
+      position: relative;
+    }
+
+    .modal-img img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .modal-img {
+      overflow: hidden;
+    }
+
+    .modal-body {
+      padding: 40px 36px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background: var(--espresso);
+      color: var(--cream);
+      border: none;
+      cursor: pointer;
+      width: 36px;
+      height: 36px;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+    }
+
+    .modal-eyebrow {
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--caramel);
+      margin-bottom: 12px;
+    }
+
+    .modal-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem;
+      font-weight: 300;
+      color: var(--espresso);
+      margin-bottom: 16px;
+    }
+
+    .modal-desc {
+      font-size: 1rem;
+      color: var(--muted);
+      line-height: 1.85;
+      flex: 1;
+    }
+
+    .modal-price {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      color: var(--caramel);
+      margin: 24px 0 20px;
+    }
+
+    /* ── ABOUT ── */
+    .about {
+      background: #E8DDD0;
+      color: var(--text);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 520px;
+      position: relative;
+    }
+
+    .about::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, #E8DDD0 0%, #D4C4B0 100%);
+      z-index: 0;
+    }
+
+    .about-img {
+      background: var(--sand);
+      overflow: visible;
+      position: relative;
+      z-index: 1;
+    }
+
+    .about-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 1;
+      display: block;
+    }
+
+    .about-text {
+      padding: 72px 64px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .about-eyebrow {
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--caramel);
+      margin-bottom: 20px;
+    }
+
+    .about-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.6rem, 2.5vw, 2.4rem);
+      font-weight: 300;
+      line-height: 1.3;
+      margin-bottom: 24px;
+      color: var(--espresso);
+    }
+
+    .about-body {
+      font-size: 1.05rem;
+      color: var(--coffee);
+      line-height: 2;
+    }
+
+    .contact {
+      position: relative;
+      padding: 50px 48px 80px;
+    }
+
+    .contact::before {
+      content: "";
+      position: absolute;
+      top: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 1px;
+      background: linear-gradient(90deg,
+          transparent,
+          var(--gold),
+          transparent);
+    }
+
+    /* ── CONTACT ── */
+    .contact {
+      padding: 100px 48px 80px;
+      text-align: center;
+      background: linear-gradient(180deg, var(--linen) 0%, var(--cream) 100%);
+      border-top: 1px solid rgba(191, 150, 80, 0.2);
+    }
+
+    .contact-inner {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .contact-eyebrow {
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+
+    .contact-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      font-weight: 300;
+      color: var(--espresso);
+      margin-bottom: 18px;
+      line-height: 1.2;
+    }
+
+    .contact-title em {
+      font-style: italic;
+      color: var(--caramel);
+    }
+
+    .contact-sub {
+      font-size: 1.05rem;
+      color: var(--muted);
+      margin-bottom: 40px;
+      line-height: 1.9;
+    }
+
+    .contact-links {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .contact-link {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      padding: 22px 32px;
+      border: 1px solid rgba(191, 150, 80, 0.25);
+      color: var(--coffee);
+      text-decoration: none;
+      transition: all .3s ease;
+      background: rgba(250, 245, 238, 0.8);
+      border-radius: 8px;
+      min-width: 160px;
+      backdrop-filter: blur(4px);
+    }
+
+    .contact-link svg {
+      width: 23px;
+      height: 23px;
+
+      margin-bottom: 6px;
+      color: var(--gold);
+      transition: transform .3s;
+    }
+
+    .contact-link:hover svg {
+      transform: scale(1.15);
+    }
+
+    .cl-label {
+      font-size: 1.1rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      color: var(--espresso);
+    }
+
+    .cl-sub {
+      font-size: 0.85rem;
+      color: var(--muted);
+      letter-spacing: 0.02em;
+    }
+
+    .contact-link--vk:hover {
+      background: #4C75A3;
+      border-color: #4C75A3;
+    }
+
+    .contact-link--vk:hover .cl-label,
+    .contact-link--vk:hover .cl-sub,
+    .contact-link--vk:hover svg {
+      color: #fff;
+    }
+
+    .contact-link--wa:hover {
+      background: #25D366;
+      border-color: #25D366;
+    }
+
+    .contact-link--wa:hover .cl-label,
+    .contact-link--wa:hover .cl-sub,
+    .contact-link--wa:hover svg {
+      color: #fff;
+    }
+
+    .contact-link--tg:hover {
+      background: #229ED9;
+      border-color: #229ED9;
+    }
+
+    .contact-link--tg:hover .cl-label,
+    .contact-link--tg:hover .cl-sub,
+    .contact-link--tg:hover svg {
+      color: #fff;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center;
+      padding: 28px 32px;
+      background: #1E0E04;
+      color: #7A5A42;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      border-top: 1px solid rgba(191, 150, 80, 0.15);
+    }
+
+    /* ── RESPONSIVE ── */
+
+    /* ── RESPONSIVE ── */
+
+    @media (min-width: 900px) {
+      .catalog-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+      }
+    }
+
+    /* ==================== МОБИЛЬНАЯ ВЕРСИЯ ==================== */
+    @media (max-width: 768px) {
+
+      /* Шапка */
+      nav {
+        padding: 16px 20px !important;
+        flex-direction: column !important;
+        gap: 16px !important;
+      }
+
+      .nav-logo {
+        font-size: 1.9rem !important;
+        text-align: center !important;
+        width: 100% !important;
+      }
+
+      .nav-links {
+        justify-content: center !important;
+        gap: 24px !important;
+        flex-wrap: wrap !important;
+        width: 100% !important;
+      }
+
+      /* HERO — исправленная версия */
+      .hero {
+        display: flex !important;
+        flex-direction: column !important;
+        min-height: auto !important;
+        padding-top: 0px !important;
+        gap: 0 !important;
+      }
+
+      .hero-text {
+        padding: 30px 24px 35px !important;
+        text-align: center !important;
+      }
+
+      .hero-buttons {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 14px !important;
+        margin: 20px auto 30px !important;
+        max-width: 340px !important;
+      }
+
+      .btn-primary,
+      .btn-outline {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 16px 24px !important;
+      }
+
+      /* Большое фото */
+      .hero-image {
+        order: 2 !important;
+        width: 100% !important;
+        padding: 0 0 60px 0 !important;
+        background: var(--linen) !important;
+      }
+
+      .hero-image img {
+        width: 100%;
+        height: 100%;
+        max-height: 100vh;
+        object-fit: cover;
+        /* будет заполнять пространство */
+        object-position: center;
+      }
+
+      /* Каталог */
+      .catalog {
+        padding: 0 16px 70px !important;
+      }
+
+      .catalog-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 16px !important;
+      }
+
+      /* Остальное */
+      .about {
+        grid-template-columns: 1fr !important;
+        margin-top: 0px !important;
+      }
+
+      .about-img {
+        display: none !important;
+      }
+
+      .modal {
+        grid-template-columns: 1fr !important;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .catalog-grid {
+        grid-template-columns: 1fr !important;
+      }
+
+      .hero-image img {
+        max-height: 520px !important;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        display: flex !important;
+        flex-direction: column !important;
+        padding-top: 0px !important;
+        background: none !important;
+      }
+
+      .hero-text {
+        padding: 30px 24px 40px !important;
+        text-align: center !important;
+        background: var(--cream) !important;
+      }
+
+      .hero-buttons {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 12px !important;
+        margin: 10px auto 30px !important;
+        max-width: 320px !important;
+      }
+
+      .btn-primary,
+      .btn-outline {
+        width: 100% !important;
+        padding: 14px 20px !important;
+        /* уменьшили высоту */
+        font-size: 0.82rem !important;
+      }
+
+      /* Убираем лишний фон за картинкой */
+      .hero-image {
+        order: 2 !important;
+        width: 100% !important;
+        padding: 0 0 50px 0 !important;
+        background: transparent !important;
+        min-height: auto !important;
+      }
+
+      .hero-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        /* ← было contain */
+        object-position: center;
+        /* убрать max-height: 85vh */
+      }
+
+      /* Отступ между Каталогом и О мастере */
+      #catalog {
+        padding-bottom: 90px !important;
+      }
+
+      .about {
+        margin-top: 0 !important;
+      }
+    }
+
+    /* Дополнительно для ПК */
+    @media (min-width: 769px) {
+      #catalog {
+        padding-bottom: 100px !important;
+      }
+
+      .about {
+        margin-top: 20px !important;
+      }
+    }
+
+    /* Кнопки в Hero — пирамидка */
+    @media (max-width: 768px) {
+      .hero-buttons {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 14px !important;
+        margin: 15px auto 35px !important;
+        max-width: 300px !important;
+      }
+
+      .btn-primary,
+      .btn-outline {
+        padding: 15px 20px !important;
+        font-size: 0.83rem !important;
+        border-radius: 6px !important;
+        box-shadow: 0 4px 12px rgba(46, 22, 8, 0.1) !important;
+      }
+
+      .btn-outline {
+        border-width: 1.5px !important;
+      }
+    }
+
+    /* ==================== КНОПКИ HERO + ОТСТУПЫ ==================== */
+    @media (max-width: 768px) {
+      .hero-buttons {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 16px !important;
+        margin: 20px auto 40px !important;
+        max-width: 320px !important;
+      }
+
+      .btn-primary,
+      .btn-outline {
+        width: 100% !important;
+        padding: 16px 24px !important;
+        font-size: 0.84rem !important;
+        border-radius: 8px !important;
+        box-shadow: 0 4px 15px rgba(46, 22, 8, 0.12) !important;
+      }
+
+      .btn-outline {
+        border: 2px solid var(--coffee) !important;
+      }
+
+      /* Отступ между Каталогом и О мастере */
+      #catalog {
+        padding-bottom: 1px !important;
+      }
+
+      .about {
+        margin-top: 10px !important;
+      }
+    }
+
+    /* Для ПК — небольшой отступ */
+    @media (min-width: 769px) {
+      #catalog {
+        padding-bottom: 60px !important;
+      }
+
+      .about {
+        margin-top: 0px !important;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .contact-links {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 18px !important;
+        max-width: 340px;
+        margin: 0 auto;
+        justify-items: center;
+      }
+
+      /* VK сверху по центру */
+      .contact-link:nth-child(1) {
+        grid-column: 1 / 3;
+        justify-self: center;
+      }
+
+      /* все карточки одинаковые */
+      .contact-link {
+        width: 160px !important;
+        min-width: 160px !important;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        padding-top: 15px !important;
+      }
+
+      .hero-image img {
+        max-height: none !important;
+        object-fit: cover !important;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero-image picture {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+
+      .hero-image img {
+        width: 100% !important;
+        height: 500px !important;
+        max-height: none !important;
+        object-fit: cover !important;
+        object-position: center top !important;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero-image {
+        display: none !important;
+      }
+
+      .hero-buttons {
+        display: none !important;
+      }
+    }
+
+    .mobile-divider {
+      display: none !important;
+    }
+
+    @media (max-width: 768px) {
+      .mobile-divider {
+        display: block !important;
+        text-align: center;
+        padding: 10px 40px;
+        background: var(--cream);
+      }
+
+      .mobile-divider svg {
+        width: 100%;
+        max-width: 280px;
+      }
+    }
+
+    @media (min-width: 769px) {
+      .mobile-divider {
+        display: none !important;
+      }
+    }
+
+    @media (min-width: 769px) {
+      .mobile-divider {
+        display: none !important;
+      }
+    }
+
+    /* Орнамент виден ТОЛЬКО на мобильных */
+    .mobile-divider {
+      display: none !important;
+    }
+
+    @media (max-width: 768px) {
+      .mobile-divider {
+        display: block !important;
+        text-align: center;
+        padding: 40px 0 50px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a class="nav-logo" href="#">Броши<span> от Елены</span></a>
+    <ul class="nav-links">
+      <li><a href="#catalog">Каталог</a></li>
+      <li><a href="#about">О мастере</a></li>
+      <li><a href="#contact">Контакты</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-text">
+        <p class="hero-eyebrow">Авторские украшения · г. Октябрьский, Башкортостан</p>
+        <h1 class="hero-title">Каждая брошь —<br><em>маленькая история</em><br>в цветах и бисере</h1>
+        <p class="hero-desc">Создаю броши в технике плетения из полимерной глины, бисера и бусин. Каждое изделие
+          уникально — никаких
+          фабричных копий, только ручная работа.</p>
+
+        <div class="hero-buttons">
+          <a class="btn-primary" href="#catalog">Смотреть каталог</a>
+          <a class="btn-outline" href="#contact">Написать мастеру</a>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <picture>
+          <source media="(max-width: 768px)" srcset="brooches-mobile.webp">
+          <img src="brooches.webp" alt="Коллекция брошей ручной работы" fetchpriority="high">
+        </picture>
+      </div>
+    </section>
+
+    <!-- CATALOG -->
+    <div class="mobile-divider">
+      <svg viewBox="0 0 400 60" xmlns="http://www.w3.org/2000/svg">
+        <!-- левая ветвь -->
+        <path d="M10,30 C30,10 50,10 70,30 C50,50 30,50 10,30Z" fill="none" stroke="#BF9650" stroke-width="1"
+          opacity="0.7" />
+        <path d="M70,30 C90,10 110,10 130,30" fill="none" stroke="#BF9650" stroke-width="1" opacity="0.6" />
+        <path d="M80,20 C85,8 95,5 100,12" fill="none" stroke="#BF9650" stroke-width="1" opacity="0.5" />
+        <path d="M80,40 C85,52 95,55 100,48" fill="none" stroke="#BF9650" stroke-width="1" opacity="0.5" />
+
+        <!-- центральный ромб -->
+        <path d="M200,14 L214,30 L200,46 L186,30 Z" fill="none" stroke="#BF9650" stroke-width="1" opacity="0.7" />
+        <path d="M200,20 L208,30 L200,40 L192,30 Z" fill="#BF9650" opacity="0.15" />
+        <path d="M174,30 Q182,22 186,30" fill="none" stroke="#BF9650" stroke-width="1" opacity="0.6" />
+        <path d="M226,30 Q218,22 214,30" fill="none" stroke="#BF9650" stroke-width="1" opacity="0.6" />
+        <path d="M174,30 Q182,38 186,30" fill="none" stroke="#BF9650" stroke-width="1" opacity="0.6" />
+        <path d="M226,30 Q218,38 214,30" fill="none" stroke="#BF9650" stroke-width="1" opacity="0.6" />
+
+        <!-- правая ветвь (зеркало) -->
+        <path d="M390,30 C370,10 350,10 330,30 C350,50 370,50 390,30Z" fill="none" stroke="#BF9650" stroke-width="1"
+          opacity="0.7" />
+        <path d="M330,30 C310,10 290,10 270,30" fill="none" stroke="#BF9650" stroke-width="1" opacity="0.6" />
+        <path d="M320,20 C315,8 305,5 300,12" fill="none" stroke="#BF9650" stroke-width="1" opacity="0.5" />
+        <path d="M320,40 C315,52 305,55 300,48" fill="none" stroke="#BF9650" stroke-width="1" opacity="0.5" />
+
+        <!-- точки-акценты -->
+        <circle cx="130" cy="30" r="2.5" fill="#BF9650" opacity="0.5" />
+        <circle cx="270" cy="30" r="2.5" fill="#BF9650" opacity="0.5" />
+        <circle cx="155" cy="20" r="1.5" fill="#BF9650" opacity="0.35" />
+        <circle cx="245" cy="20" r="1.5" fill="#BF9650" opacity="0.35" />
+        <circle cx="155" cy="40" r="1.5" fill="#BF9650" opacity="0.35" />
+        <circle cx="245" cy="40" r="1.5" fill="#BF9650" opacity="0.35" />
+      </svg>
+    </div>
+
+    <section id="catalog">
+      <div class="divider">
+        <h2 class="divider-title">Каталог украшений</h2>
+        <p class="divider-sub">Нажмите на брошь, чтобы узнать подробнее</p>
+      </div>
+      <div class="catalog catalog-grid" id="catalogGrid"></div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+      <div class="about-img">
+        <img src="img/10.webp" alt="Броши мастера">
+      </div>
+      <div class="about-text">
+        <p class="about-eyebrow" style="color:var(--caramel)">О мастере</p>
+        <h2 class="about-title">Влюблена в броши с первого стежка</h2>
+        <p class="about-body">
+          Меня зовут Елена, я из города Октябрьский (Республика Башкортостан). Создаю авторские броши из полимерной
+          глины,
+          кожи и кристаллов — каждое изделие собирается вручную с любовью к деталям.<br><br>Вдохновляюсь природой:
+          цветами, осенними красками, игрой света в бисере. Принимаю индивидуальные заказы — напишите мне, и мы подберем
+          украшение специально для вас.<br><br>Доставка по всей России · Самовывоз в г. Октябрьский
+        </p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+      <p class="contact-label">Связаться со мной</p>
+      <h2 class="contact-title">Заказать или задать вопрос</h2>
+      <p class="contact-sub">Отвечаю в течение нескольких часов · Индивидуальные заказы приветствуются</p>
+
+      <div class="contact-links">
+        <a class="contact-link" href="https://vk.ru/shmelevaya" target="_blank">
+          <svg width="44" height="44" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M12.785 16.241s.288-.032.436-.194c.136-.148.132-.427.132-.427s-.02-1.304.586-1.496c.598-.189 1.365 1.26 2.179 1.815.615.418 1.082.326 1.082.326l2.17-.03s1.136-.071.597-1.598c-.044-.123-.312-.66-1.603-1.865-1.35-1.26-1.169-1.056.457-3.236.99-1.32 1.385-2.125 1.261-2.47-.118-.328-.84-.241-.84-.241l-2.44.015s-.181-.025-.315.057c-.132.08-.216.267-.216.267s-.384 1.023-.895 1.893c-1.08 1.834-1.512 1.931-1.688 1.817-.41-.265-.308-1.065-.308-1.632 0-1.776.269-2.517-.525-2.71-.264-.063-.457-.105-1.132-.112-.866-.009-1.598.003-2.013.206-.276.134-.489.433-.359.45.16.022.522.098.715.36.248.34.24 1.104.24 1.104s.143 2.09-.333 2.35c-.327.176-.775-.183-1.737-1.827-.493-.852-.866-1.795-.866-1.795s-.072-.18-.202-.277c-.157-.117-.376-.154-.376-.154l-2.32.015s-.348.01-.476.161C4.087 8.09 4.2 8.43 4.2 8.43s1.816 4.25 3.872 6.39c1.886 1.96 4.026 1.83 4.026 1.83l1.687-.009z" />
+          </svg>
+          ВКонтакте
+        </a>
+
+        <a class="contact-link" href="https://wa.me/79177470216" target="_blank">
+          <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path
+              d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+          </svg>
+          WhatsApp
+        </a>
+        <a class="contact-link" href="https://t.me/ElenaBroshi" target="_blank">
+          <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M21 5L2 12.5l7 1M21 5l-4.5 15-4.5-8.5M21 5L9 13.5m0 0V19l3-2.5" />
+          </svg>
+          Telegram
+        </a>
+      </div>
+    </section>
+
+  </main>
+  <footer>
+    © 2026 Броши от Елены · г. Октябрьский, Республика Башкортостан · Доставка по России &nbsp;·&nbsp; Сделано <a
+      href="https://t.me/fecva" style="color:var(--sand);text-decoration:underline;">@fecva</a> &lt;3
+  </footer>
+
+  <!-- MODAL -->
+  <div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
+    <div class="modal" id="modal">
+      <button class="modal-close" onclick="closeModalDirect()">✕</button>
+      <div class="modal-img"><img id="modalImg" src="" alt=""></div>
+      <div class="modal-body">
+        <p class="modal-eyebrow" id="modalEyebrow"></p>
+        <h3 class="modal-title" id="modalTitle"></h3>
+        <p class="modal-desc" id="modalDesc"></p>
+        <div class="modal-price" id="modalPrice"></div>
+        <a class="btn-primary" href="#contact" onclick="closeModalDirect()" style="text-align:center;">Заказать эту
+          брошь</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+
+    // ─── CATALOG DATA (замените фото, названия, цены под себя) ───
+
+    const products = [
+      {
+        id: 1,
+        name: "Осенний букет",
+        tag: "Полимерная глина",
+        desc: "Три розы — шоколадная, капучино и нежно-розовая — с лавандовым бисером и медными листьями. Тёплый и чувственный образ.",
+        longDesc: "Брошь из полимерной глины с шоколадной, пыльно-розовой и кремовой розами. Декор: лавандовый бисер, медные зёрна, бронзовые листья, миниатюрные шишки. Размер около 8 см. Единственный экземпляр.",
+        price: "1 600 ₽",
+        img: "img/1.webp"
+      },
+      {
+        id: 2,
+        name: "Рыжий георгин",
+        tag: "Натуральная кожа",
+        desc: "Крупный цветок из кожи в рыжо-бордовых тонах с зелёными листьями и розовым бисерным центром.",
+        longDesc: "Каждый лепесток вырезан и обработан вручную из натуральной кожи. Многослойный цветок сочетает рыжие, терракотовые и бордовые оттенки. Центр украшен розовым бисером и кристаллами. Размер около 10 см.",
+        price: "1 700 ₽",
+        img: "img/2.webp"
+      },
+      {
+        id: 3,
+        name: "Морская волна",
+        tag: "Бисер и кристаллы",
+        desc: "Круглая брошь из бирюзовых бусин и изумрудных кристаллов с золотистыми вставками.",
+        longDesc: "Плотная круглая композиция из бирюзовых матовых шаров, зелёных гранёных кристаллов и золотистого бисера. Богатое и яркое украшение — отличный акцент для однотонного образа. Размер около 6 см.",
+        price: "1 400 ₽",
+        img: "img/3.webp"
+      },
+      {
+        id: 4,
+        name: "Рубиновое сердце",
+        tag: "Бисер и кристаллы",
+        desc: "Насыщенно-красная брошь из крупных гранёных кристаллов с золотистым бисером в бронзовой оправе.",
+        longDesc: "Эффектная брошь из рубиново-красных кристаллов разного размера. Золотистые вставки подчёркивают глубину цвета. Бронзовая оправа придаёт винтажный шарм. Размер около 6.5 см. Идеальна для вечернего образа.",
+        price: "1 500 ₽",
+        img: "img/4.webp"
+      },
+      {
+        id: 5,
+        name: "Розовый букет",
+        tag: "Бисер и кристаллы",
+        desc: "Нежный букет из розового бисера, перламутровых цветочков и сверкающих кристаллов на зелёном стебле.",
+        longDesc: "Брошь в форме букета — розовый бисер, кристаллы, перламутровые цветочки-бусины, зелёный стебель, перевязанный бордовой лентой. Воздушная и романтичная. Размер около 7 см.",
+        price: "1 500 ₽",
+        img: "img/5.webp"
+      },
+      {
+        id: 6,
+        name: "Золотой рассвет",
+        tag: "Полимерная глина",
+        desc: "Три розы — белая, лимонная и желтая — с перламутровыми бусинами и бронзовыми листьями. Светлый и радостный образ.",
+        longDesc: "Брошь с белой, ярко-оранжевой и нежно-жёлтой розами из полимерной глины. Декор: жемчужный бисер, янтарные кристаллы, зелёные нефритовые листочки, бронзовые элементы. Размер около 8 см.",
+        price: "1 600 ₽",
+        img: "img/6.webp"
+      },
+      {
+        id: 7,
+        name: "Весенний луг",
+        tag: "Бисер и кристаллы",
+        desc: "Круглая брошь из всех оттенков зелёного — с перламутровым цветком в центре и золотистыми акцентами.",
+        longDesc: "Богатая смесь салатовых, изумрудных и оливковых кристаллов с жемчужными бусинами и золотым бисером. В центре — перламутровый цветок. Живая и свежая энергетика весны. Размер около 7 см.",
+        price: "1 400 ₽",
+        img: "img/7.webp"
+      },
+      {
+        id: 8,
+        name: "Лазурный сад",
+        tag: "Полимерная глина",
+        desc: "Три розы — голубая, серая и белая — с голубым бисером и серебристыми листьями. Спокойный и элегантный образ.",
+        longDesc: "Голубая, стальная и молочная розы из полимерной глины с бирюзовыми кабошонами, белым и синим бисером. Серебристые листья завершают композицию. Размер около 7.5 см.",
+        price: "1 600 ₽",
+        img: "img/8.webp"
+      },
+      {
+        id: 9,
+        name: "Лавандовый букет",
+        tag: "Бисер и кристаллы",
+        desc: "Изящный букет из нежно фиолетовых кристаллов и бисера на зелёном стебле с бордовым бантиком.",
+        longDesc: "Брошь-букет из лавандового и сиреневого бисера, крупных фиолетовых риволи-кристаллов и серебристых бусин. Зелёный стебель перевязан бордовой лентой. Нежная и поэтичная. Размер около 8 см.",
+        price: "1 500 ₽",
+        img: "img/9.webp"
+      },
+    ];
+
+
+    // ─── RENDER CARDS ───
+    const grid = document.getElementById('catalogGrid');
+    products.forEach(p => {
+      const card = document.createElement('div');
+      card.className = 'card';
+      card.innerHTML = `
+    <div class="card-img"><img src="${p.img}" alt="${p.name}" loading="lazy"></div>
+    <div class="card-body">
+      <div class="card-name">${p.name}</div>
+      <div class="card-desc">${p.desc}</div>
+      <div class="card-footer">
+        <span class="card-price">${p.price}</span>
+      </div>
+    </div>
+  `;
+      if (p.name === "Рыжий георгин") {
+        card.querySelector('.card-img img').style.objectPosition = 'center center';
+        card.querySelector('.card-img img').style.transformOrigin = 'center center';
+      }
+      card.addEventListener('click', () => openModal(p));
+      grid.appendChild(card);
+    });
+
+    // ─── MODAL ───
+    function openModal(p) {
+      document.getElementById('modalImg').src = p.img;
+      document.getElementById('modalTitle').textContent = p.name;
+      document.getElementById('modalDesc').textContent = p.longDesc;
+      document.getElementById('modalPrice').textContent = p.price;
+      document.getElementById('modalOverlay').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeModal(e) {
+      if (e.target === document.getElementById('modalOverlay')) closeModalDirect();
+    }
+    function closeModalDirect() {
+      document.getElementById('modalOverlay').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    // ── SCROLL REVEAL ──
+    const revealEls = document.querySelectorAll('.card, .divider, .about-text, .about-img, .contact-title, .contact-sub, .contact-links');
+    revealEls.forEach((el, i) => {
+      el.classList.add('reveal');
+      const mod = i % 4;
+      if (mod === 1) el.classList.add('delay-r1');
+      else if (mod === 2) el.classList.add('delay-r2');
+      else if (mod === 3) el.classList.add('delay-r3');
+      else el.classList.add('delay-r4');
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('revealed');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+    revealEls.forEach(el => observer.observe(el));
+
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModalDirect(); });
+
+  </script>
+</body>
+
+</html>
